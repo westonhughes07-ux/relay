@@ -19,7 +19,10 @@
  --ink:#05070a;--ink2:#0b0e14;--ink3:#11151d;--line:#1d232e;--soft:#141922;
  --paper:#eef1f5;--dim:#98a1b0;--mute:#626b7a;
  --live:#00e5a0;--live2:#38ffc4;--glow:rgba(0,229,160,.22);
- --vio:#7a6bff;--amber:#ffc247;--hot:#ff4d3d;--dead:#252d39;
+ --vio:#7a6bff;--amber:#ffc247;--hot:#ff4d3d;
+ /* unlit wire. Must stay clearly readable: the player plans moves by reading
+    wire SHAPES, so too-dark here makes the puzzle unreadable, not moody. */
+ --dead:#4d5a6e;
  --mono:"IBM Plex Mono",ui-monospace,monospace;--serif:"Instrument Serif",Georgia,serif;
  --e:cubic-bezier(.22,1,.36,1);
 }
