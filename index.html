@@ -203,6 +203,12 @@ footer{font-size:.66rem;color:#6b5f4f;text-align:center;line-height:1.8}
 .x{position:absolute;top:7px;right:9px;flex:0;width:auto;padding:5px 8px;font-size:.9rem;
   color:var(--cream-3);background:none;border:0}
 .x:hover{color:var(--amber);background:none}
+
+/* Tall viewports: let the block grow into the height instead of stranding
+   800px of dead space above and below a fixed-width board. Caught by
+   `npm run sweep` at 1440x2560 (32.3% dead). */
+@media (min-height:1100px){ .wrap{max-width:600px} .city{height:120px} }
+@media (min-height:1500px){ .wrap{max-width:680px} .city{height:150px} }
 @media(prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
 @media(max-width:430px){.st{font-size:.62rem}.st b{font-size:.98rem}.sc{gap:16px}.city{height:80px}}
 </style>
