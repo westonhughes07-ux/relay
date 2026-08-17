@@ -46,7 +46,7 @@ setTimeout(()=>{
  const at=d.querySelector('[data-mode="archive"]');
  ok("archive tab disabled with no history", at.disabled===true, "title: "+at.title);
  at.dispatchEvent(new w.MouseEvent("click",{bubbles:true}));
- ok("clicking archive stays on Daily", d.getElementById("modeLabel").textContent.indexOf("Daily")>=0, d.getElementById("modeLabel").textContent);
+ ok("clicking archive stays on Daily", d.querySelector('[data-mode="daily"]').classList.contains("on"), "active tab: "+[...d.querySelectorAll(".tab")].filter(t=>t.classList.contains("on")).map(t=>t.dataset.mode));
  ok("no pre-epoch board served", d.getElementById("pno").textContent==="1", "No."+d.getElementById("pno").textContent);
 
  console.log("\n--- ENDLESS ---");
